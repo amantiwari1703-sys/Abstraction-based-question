@@ -1,16 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Shape s = new Circle();
-        s.draw();
+        car c = new car();
+        c.start();
+        c.run();
     }
 }
 
-abstract class Shape{
-    abstract void draw();
-}
-class Circle extends Shape{
-    void draw(){
-        System.out.println("drawing circle");
+abstract class vehicle{
+    void start(){
+        System.out.println("vehicle starts");
+    }
+    abstract void run();
+
+
+    }
+
+class car extends vehicle{
+    void run(){
+        System.out.println("car runs");
+
     }
 
 }
+
+
+
