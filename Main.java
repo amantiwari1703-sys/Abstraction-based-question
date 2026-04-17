@@ -1,24 +1,27 @@
 public class Main {
     public static void main(String[] args) {
-        Student s=new Student();
-        s.display();
-
-
+      Fan f=new Fan();
+      f.start();
+      f.stop();
 
     }
 }
-
-abstract class Person{
-    Person(){
-        System.out.print("constructor of person");
-    }
-    abstract void display();
+abstract class Machine{
+    abstract void start();
+    abstract void stop();
 
 }
-class Student extends Person{
-    void display(){
-        System.out.print("Student details");
-    }
-}
+class Fan extends Machine{
+    void start(){
+        System.out.println("Fan starts");
 
+    }
+    void stop(){
+        System.out.println("Fan stops");
+    }
+
+
+    
+
+}
 
