@@ -1,27 +1,14 @@
 public class Main {
     public static void main(String[] args) {
-      Fan f=new Fan();
-      f.start();
-      f.stop();
-
+        Animal a=new Cat();
+        a.eat();
     }
 }
-abstract class Machine{
-    abstract void start();
-    abstract void stop();
-
+abstract class Animal{
+    abstract void eat();
 }
-class Fan extends Machine{
-    void start(){
-        System.out.println("Fan starts");
-
+class Cat extends Animal{
+    void eat(){
+        System.out.println("cat eats milk");
     }
-    void stop(){
-        System.out.println("Fan stops");
-    }
-
-
-    
-
 }
-
